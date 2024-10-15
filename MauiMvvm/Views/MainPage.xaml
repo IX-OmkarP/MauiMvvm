@@ -4,6 +4,8 @@
              x:Class="MauiMvvm.Views.MainPage" 
              Title="Sample Page">
     <ContentPage.Content>
-        <Button Text="Open Camera" Clicked="Button_Clicked"/>
+        <StackLayout WidthRequest="200" HeightRequest="200">
+            <Button Text="Open Camera" Clicked="Button_Clicked"/>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
