@@ -45,16 +45,4 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <PackageReference Update="Microsoft.Maui.Controls" Version="9.0.0-rc.2.24503.2" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="9.0.0-rc.2.24503.2" />
-	</ItemGroup>
-
 </Project>
