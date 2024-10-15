@@ -2,30 +2,18 @@
 
 public class MainPageViewModel : ViewModelBase
 {
-    private string _photoPath;
-    public string PhotoPath
-    {
-        get => _photoPath;
-        set => SetProperty(ref _photoPath, value);
-    }
-
-    public MainPageViewModel()
-    {
-        // TakePhotoCommand = new AsyncRelayCommand(TakePhotoAsync);
-    }
+    public MainPageViewModel() { }
 
     public async Task TakePhotoAsync()
     {
         try
         {
+            await App.Current.MainPage.DisplayAlert("Display Alert", "Before camera", "Ok");
             var photo = await MediaPicker.CapturePhotoAsync();
-            using var stream = await photo.OpenReadAsync();
-            var streamImageSource = ImageSource.FromStream(() => stream);
-            PhotoPath = streamImageSource.ToString(); // or handle as needed
+            await App.Current.MainPage.DisplayAlert("Display Alert", "After camera","Ok");
         }
         catch (Exception ex)
         {
-            // Handle exceptions
             await App.Current.MainPage.DisplayAlert("Error", ex.Message, "OK");
         }
     }

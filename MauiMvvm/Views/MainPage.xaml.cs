@@ -13,6 +13,6 @@ public partial class MainPage : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-        ViewModel.TakePhotoAsync();
+        _ = ViewModel.TakePhotoAsync();
     }
 }
